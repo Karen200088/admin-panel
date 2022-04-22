@@ -1,0 +1,183 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "resources/sass/mediaQuery.scss";
+@import "resources/sass/constants.scss";
+
+// https://www.akveo.com/ngx-admin/pages/dashboard?theme=material-light
+
+a {
+    text-decoration: none;
+}
+
+header {
+
+    background: $main-blue;
+    border-bottom: 2px solid $dark-blue;
+    height: 85px;
+    box-shadow: 0 0.3rem 1rem 0 $dark-blue;
+
+    .navbar {
+        .navbar-brand {
+
+            color: $white;
+            margin-left: 30px;
+            font-size: 35px;
+            transition: 0.2s;
+            font-weight: 500;
+
+            &:hover {
+                color: $light-blue;
+            }
+        }
+
+        .sidebar-open-button {
+            color: #343434;
+            font-size: 40px;
+            font-weight: 500;
+            margin-left: 15px;
+            margin-top: -10px;
+        }
+
+        .logout {
+            margin-right: 30px;
+
+            button {
+                font-size: 19px;
+            }
+        }
+    }
+
+}
+
+.sidebar-block {
+    background: $main-blue;
+    height: calc(100vh - 85px);
+    padding: 0;
+    border-right: 2px solid rgba(10, 10, 10, 0.35);
+
+    .sidebar {
+        .sidebar-item {
+            color: $white;
+            font-family: Open Sans, sans-serif;
+            font-weight: 600;
+            line-height: 1.5rem;
+            padding: 1rem 1rem;
+            margin-bottom: 0;
+            border-bottom: 1px solid rgba(10, 10, 10, 0.35);
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.25s;
+
+            span {
+                font-size: 25px;
+            }
+
+            &:hover {
+                color: $light-blue;
+                background: $dark-blue;
+            }
+        }
+
+        .active {
+            color: $light-blue;
+            background: $dark-blue;
+        }
+    }
+
+}
+
+
+.login-form-block {
+    background: $main-blue;
+
+    .login-card {
+        margin-top: 120px !important;
+    }
+}
+
+.hide-overflow {
+    overflow: visible !important;
+}
+
+.main-content {
+
+    background: $dark-blue;
+    overflow-y: scroll;
+    height: calc(100vh - 85px);
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $white;
+        border-radius: 10px;
+    }
+
+    .admin-content-header {
+        background: $main-blue;
+        border: 0.0625rem solid #101426;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: none;
+        font-family: Open Sans, sans-serif;
+        font-size: .9375rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        margin-top: 16px;
+        padding: 20px;
+
+        h2 {
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.users-block {
+
+    .users-table {
+
+        font-size: 23px;
+
+        tbody {
+
+            h3 {
+                color: $white;
+            }
+
+            .user-actions {
+                font-size: 26px;
+
+                svg {
+                    cursor: pointer;
+                    margin: 0 10px;
+                    transition: 0.1s;
+                    color: #D9534F;
+
+                    &:first-child {
+                        font-size: 24px;
+                        color: #ecb81e;
+                    }
+
+                    &:hover {
+                        opacity: 0.75;
+                    }
+                }
+            }
+        }
+    }
+
+    .spinner-border {
+        width: 100px;
+        height: 100px;
+    }
+}
